@@ -1,8 +1,9 @@
 Title: Are we living in a simulation?
 Date: 2008-05-05 02:24
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Tags: information theory, quantum mechanics, voting
 Slug: are-we-living-in-simulation
+Category: Physics
 
 Today I came across one of Dr. Nick Bostrom's [existential philosophy
 papers](http://www.simulation-argument.com/simulation.html) regarding

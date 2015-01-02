@@ -2,7 +2,7 @@ Title: Jerusalem 2014-15
 Date: 2014-12-31T13:26:46+02:00
 Category: Physics
 Tags: travel, physics, pelican
-Authors: Adam Getchell
+Author: Adam Getchell
 
 And again, it's been quite awhile.
 

@@ -1,6 +1,6 @@
 Title: Feynman diagrams in LaTeX
 Date: 2012-09-02 09:15
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell (adam.getchell@gmail.com)
 Tags: latex, field theory
 Slug: feynman-diagrams-in-latex
 Category: Physics
@@ -70,5 +70,3 @@ I hope this shortens the learning curve for someone else! If you have
 any feedback or corrections, send notes or pull requests to the gists.  
 
 Happy $\LaTeX$-ing!
-
-</p>

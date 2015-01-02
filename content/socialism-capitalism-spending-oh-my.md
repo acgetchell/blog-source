@@ -1,6 +1,6 @@
 Title: Socialism, Capitalism, Spending, oh my!
 Date: 2010-12-04 01:50
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Tags: politics
 Slug: socialism-capitalism-spending-oh-my
 
@@ -9,7 +9,7 @@ see them.
 
 <div>
 
-  
+
 
 </div>
 
@@ -19,7 +19,7 @@ see them.
 Amendment](http://www.usconstitution.net/xconst_Am1.html)! ;-)
 <div>
 
-  
+
 
 </div>
 
@@ -32,7 +32,7 @@ need a break from technical reading and writing.)
 
 <div>
 
-  
+
 
 </div>
 
@@ -47,7 +47,7 @@ the season's harvest were shared equally amongst the colonists.
 
 <div>
 
-  
+
 
 </div>
 
@@ -60,7 +60,7 @@ anyone?)
 
 <div>
 
-  
+
 
 </div>
 
@@ -76,7 +76,7 @@ reducing the harvest, and so forth.
 
 <div>
 
-  
+
 
 </div>
 
@@ -91,7 +91,7 @@ profit.
 
 <div>
 
-  
+
 
 </div>
 
@@ -105,7 +105,7 @@ to buy from those that did. No one starved.
 
 <div>
 
-  
+
 
 </div>
 
@@ -121,7 +121,7 @@ behavior were no longer required ..."
 
 <div>
 
-  
+
 
 </div>
 
@@ -133,7 +133,7 @@ Score one for capitalism, individual thrift and perseverance, and ....
 
 <div>
 
-  
+
 
 </div>
 
@@ -145,7 +145,7 @@ But wait. Where did they get the land?
 
 <div>
 
-  
+
 
 </div>
 
@@ -160,7 +160,7 @@ point.)
 
 <div>
 
-  
+
 
 </div>
 
@@ -173,7 +173,7 @@ they then were allowed to make their own way.
 
 <div>
 
-  
+
 
 </div>
 
@@ -188,7 +188,7 @@ their new lives. (They had to supply the effort.)
 
 <div>
 
-  
+
 
 </div>
 
@@ -201,7 +201,7 @@ one](http://en.wikipedia.org/wiki/Information_society).
 
 <div>
 
-  
+
 
 </div>
 
@@ -213,7 +213,7 @@ What are the tools needed to make our way today?
 
 <div>
 
-  
+
 
 </div>
 
@@ -225,7 +225,7 @@ I'd argue for these, in descending order:
 
 <div>
 
-  
+
 
 </div>
 
@@ -246,7 +246,7 @@ I'd also argue that lack of any one of these items is problematic.
 
 <div>
 
-  
+
 
 </div>
 
@@ -261,7 +261,7 @@ alone, something that requires a societal solution.
 
 <div>
 
-  
+
 
 </div>
 
@@ -277,7 +277,7 @@ plan for the future](http://en.wikipedia.org/wiki/The_Road).
 
 <div>
 
-  
+
 
 </div>
 
@@ -291,7 +291,7 @@ extreme for any of the above, and we will suffer.
 
 <div>
 
-  
+
 
 </div>
 
@@ -306,7 +306,7 @@ individuals/society will naturally have their own values.
 
 <div>
 
-  
+
 
 </div>
 
@@ -320,7 +320,7 @@ of that success [unfairly](http://en.wikipedia.org/wiki/Fair_division)?
 
 <div>
 
-  
+
 
 </div>
 
@@ -333,7 +333,7 @@ problem.)
 
 <div>
 
-  
+
 
 </div>
 
@@ -345,7 +345,7 @@ Government spending:
 
 <div>
 
-  
+
 
 </div>
 
@@ -362,7 +362,7 @@ laws** as we are at [making them](http://law.justia.com/).
 
 <div>
 
-  
+
 
 </div>
 
@@ -382,7 +382,7 @@ possible](http://www.theonion.com/articles/universe-admits-to-wronging-area-man-
 
 <div>
 
-  
+
 
 </div>
 
@@ -395,7 +395,7 @@ possible](http://www.theonion.com/articles/universe-admits-to-wronging-area-man-
 
 <div>
 
-  
+
 
 </div>
 
@@ -408,7 +408,7 @@ there are only so much goods, services, information, and time available.
 
 <div>
 
-  
+
 
 </div>
 
@@ -423,7 +423,7 @@ resources today).
 
 <div>
 
-  
+
 
 </div>
 
@@ -436,7 +436,7 @@ future restrictions on your earning potential.
 
 <div>
 
-  
+
 
 </div>
 
@@ -448,7 +448,7 @@ Pretty straightforward stuff.
 
 <div>
 
-  
+
 
 </div>
 
@@ -462,7 +462,7 @@ government. Or perhaps it's the other way around.
 
 <div>
 
-  
+
 
 </div>
 
@@ -477,7 +477,7 @@ increase it.
 
 <div>
 
-  
+
 
 </div>
 
@@ -496,7 +496,7 @@ all](http://www.csmonitor.com/USA/Politics/2010/1203/Is-deficit-commission-wrong
 
 <div>
 
-  
+
 
 </div>
 
@@ -510,7 +510,7 @@ that indicate otherwise.
 
 <div>
 
-  
+
 
 </div>
 
@@ -536,17 +536,16 @@ Okay, back to considering things I have somewhat of a clue about.
 
 <div>
 
-  
+
 
 </div>
 
 <div>
 
-  
+
 
 </div>
 
 </div>
 
 </p>
-

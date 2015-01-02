@@ -1,8 +1,9 @@
 Title: Fun with ASP.NET security and Windows 2003 SP1 breakage
 Date: 2007-09-22 23:40
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Tags: .net
 Slug: fun-with-aspnet-security-and-windows
+Category: Programming
 
 Problem: you want secure database access, using a connection string like
 this:
@@ -86,12 +87,12 @@ The application attempted to perform an operation not allowed by the
 security policy. To grant this application the required permission
 please contact your system administrator or change the application's
 trust level in the configuration file.  
-  
+
 **Exception Details:** System.Security.SecurityException: Requested
 registry access is not allowed.  
-  
+
 **Source Error:**  
-  
+
 
 +--------------------------------------------------------------------------+
 |     Line 157:    DBCommandWrapper dbCommandWrapper = authDB.GetStoredPro |
@@ -110,13 +111,13 @@ registry access is not allowed.
 | </code>                                                                  |
 +--------------------------------------------------------------------------+
 
-  
+
 **<font face="Verdana">Source File:
 </font>**\\\\Webdevel.caes.ucdavis.edu\\wwwroot\$\\EligibilityList\\AuthenticationModule.cs**<font face="Verdana">
    Line: </font>**159  
-  
+
 **<font face="Verdana">Stack Trace:</font>**  
-  
+
 
 +--------------------------------------------------------------------------+
 |     [SecurityException: Requested registry access is not allowed.]       |
@@ -201,19 +202,19 @@ page, only to find:</font></font>
 <font face="Arial" size="2"><!--StartFragment --><font face="Times New Roman" size="3"> Server
 Error in '/EligibilityList' Application.  
 --------------------------------------------------------------------------------  
-  
+
 File or assembly name ko20f8cc.dll, or one of its dependencies, was not
 found.  
 Description: An unhandled exception occurred during the execution of the
 current web request. Please review the stack trace for more information
 about the error and where it originated in the code.  
-  
+
 Exception Details: System.IO.FileNotFoundException: File or assembly
 name ko20f8cc.dll, or one of its dependencies, was not found.  
-  
+
 Source Error:  
-  
-  
+
+
 Line 119:      private bool Authorize(string requestUserID)  
 Line 120:      {  
 Line 121:         Database authDB =
@@ -321,4 +322,3 @@ Library v2.0 aren’t coming out until September.</font>
 </font></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></font>
 
 </p>
-

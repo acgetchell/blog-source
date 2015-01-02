@@ -1,28 +1,29 @@
 Title: Using Enterprise Library Logging
 Date: 2007-09-22 23:40
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Tags: .net
 Slug: using-enterprise-library-logging
+Category: Programming
 
 To get logging working without pesky WMI/Performance counter errors on
 <span style="font-style: italic;">every</span> logged event:  
-  
+
 Per [Tom Hollander's
 weblog](http://weblogs.asp.net/tomholl/archive/2005/02/18/376187.aspx#FeedBack)  
-  
+
 Go to the Logging project, Project Properties dialog for the Common
 project, and under Configuration Properties\\Build, find the Conditional
 Compilation Properties property and remove ;USEWMI;USEPERFORMANCECOUNTER
 for the build type you're interested in (ReleaseFinal, in this case).  
-  
+
 Ignore compile warnings about DB2 goop.  
-  
+
 Delete any old project references and re-add reference to new version in
 C:\\Program Files\\Microsoft Enterprise
 Library\\src\\Logging\\bin\\ReleaseFinal.  
-  
+
 Then add an appropriate using statement and use in code:  
-  
+
 
 <div class="cf">
 
@@ -170,24 +171,23 @@ class="cb1">this</span>.Page\_Load);
 
 </div>
 
-  
-  
+
+
 <span style="font-style: italic;">Voila!</span>  
-  
+
 It'd sure make it easier to post code to my weblog if VisualStudio 2005
 included
 [CopySourceAsHtml](http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/)
 functionality. This is a great application, too bad it doesn't work for
 me. I seem to have uncovered the first interaction between CSAH and a
 trial VisualPerl installation that won't uninstall.  
-  
+
 Par for the course.  
-  
+
 Although, I've suggested to the Visual Studio 2005 guys that they add
 this feature.  
-  
+
 P.S. Collin worked to fix CSAH, and I nuked and reinstalled my system,
 including Visual Studio 2003.NET. That seems to have done the trick.
 
 </p>
-

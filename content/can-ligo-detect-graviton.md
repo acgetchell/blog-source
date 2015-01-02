@@ -1,6 +1,6 @@
 Title: Can LIGO detect a graviton?
 Date: 2011-12-28 00:09
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Category: Physics
 Tags: quantum gravity
 Slug: can-ligo-detect-graviton
@@ -75,7 +75,7 @@ $$f(r)=r^{-n}e^{-\frac{r}{R}}$$
 
 $$Q=1-\frac{n}{6}$$
 
-$$4\pi^{2}L_{p}^{2}=4\pi^{2}G\frac{\hbar}{c^{3}}=8\times10^{-65}cm^{2}$$ 
+$$4\pi^{2}L_{p}^{2}=4\pi^{2}G\frac{\hbar}{c^{3}}=8\times10^{-65}cm^{2}$$
 
 This means that if you take a detector the mass of the Earth, squash it
 into a large flat sheet, and run it for the lifetime of the universe,

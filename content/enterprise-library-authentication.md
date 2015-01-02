@@ -1,27 +1,28 @@
 Title: Enterprise Library authentication
 Date: 2007-09-22 23:40
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Tags: .net
 Slug: enterprise-library-authentication
+Category: Programming
 
 [Doug Rohrer](http://weblogs.asp.net/drohrer/), one of
 [Avanade](http://www.avanade.com/) guys who worked on the Enterprise
 Library, has posted a fantastic End to End Enterprise Library project
 which incorporates the EL into ASP.NET and Winforms applications.  
-  
+
 Using Collin Collier's wonderful [Copy Source As
 HTML](http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/)
 makes blogging the code much easier.  
-  
+
 Looking at Doug's work, we run into the common pattern of writing a base
 page class which all asp.net pages inherit. Then he overrides the OnInit
 function to kickstart authentication.  
-  
+
 I've been using an [ASP.NET Http
 Module](http://support.microsoft.com/default.aspx?scid=kb;%5BLN%5D;Q307996)
 to trap OnAuthenticate, but this is an interesting approach. Here's
 Dougs BasePage class:  
-  
+
 
 <div class="cf">
 
@@ -402,9 +403,8 @@ to Login</span>
 
 </div>
 
-  
-  
+
+
 Cool stuff!
 
 </p>
-

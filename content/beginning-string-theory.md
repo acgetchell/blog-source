@@ -1,8 +1,9 @@
 Title: Beginning String Theory
 Date: 2007-09-22 23:39
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Tags: string theory
 Slug: beginning-string-theory
+Category: Physics
 
 Okay, I’ve been posting enough about my day job.
 
@@ -38,4 +39,3 @@ Nucl.Phys.B241:333–380,1984 on actual paper.
 Well, this was fun but I should go back to reviewing my notes.
 
 </p>
-

@@ -1,8 +1,9 @@
 Title: Software Archaeology
 Date: 2011-04-11 22:19
-Author: Adam Getchell (noreply@blogger.com)
-Tags: programming
+Author: Adam Getchell
+Tags:
 Slug: software-archaeology
+Category: Programming
 
 [Vernor Vinge](http://en.wikipedia.org/wiki/Vernor_Vinge) prophetically
 [wrote of a
@@ -13,7 +14,7 @@ depended upon.
 
 <div>
 
-  
+
 
 </div>
 
@@ -29,7 +30,7 @@ for, right?).
 
 <div>
 
-  
+
 
 </div>
 
@@ -44,7 +45,7 @@ How to do so?
 
 <div>
 
-  
+
 
 </div>
 
@@ -70,7 +71,7 @@ or more confused.
 
 <div>
 
-  
+
 
 </div>
 
@@ -87,7 +88,7 @@ which is a perfect solution to your problem.
 
 <div>
 
-  
+
 
 </div>
 
@@ -104,7 +105,7 @@ upon here.)
 
 <div>
 
-  
+
 
 </div>
 
@@ -122,7 +123,7 @@ pretty concise, descriptive, and useful.
 
 <div>
 
-  
+
 
 </div>
 
@@ -141,7 +142,7 @@ is rare.
 
 <div>
 
-  
+
 
 </div>
 
@@ -156,7 +157,7 @@ with "ancient" methods/languages.
 
 <div>
 
-  
+
 
 </div>
 
@@ -168,7 +169,7 @@ Hence, onto the first item on the Joel Test: source control.
 
 <div>
 
-  
+
 
 </div>
 
@@ -180,7 +181,7 @@ But not just any source control. [GitHub](https://github.com/).
 
 <div>
 
-  
+
 
 </div>
 
@@ -196,7 +197,7 @@ whether they know it or not (and the good ones will know it).
 
 <div>
 
-  
+
 
 </div>
 
@@ -213,7 +214,7 @@ problem in many different programming languages.
 
 <div>
 
-  
+
 
 </div>
 
@@ -231,7 +232,7 @@ issues, teams, organizations -- plus some more useful ones (e.g. the
 
 <div>
 
-  
+
 
 </div>
 
@@ -247,7 +248,7 @@ fuss about with SharePoint and licensing, and so forth.
 
 <div>
 
-  
+
 
 </div>
 
@@ -278,7 +279,7 @@ really wanted to illustrate it's particular benefits in this instance.
 
 <div>
 
-  
+
 
 </div>
 
@@ -319,7 +320,7 @@ stuff without getting in the way. (Or better yet, delegate.)
 
 <div>
 
-  
+
 
 </div>
 
@@ -335,7 +336,7 @@ to one of our projects with minimal hassle.
 
 <div>
 
-  
+
 
 </div>
 
@@ -348,7 +349,7 @@ fairly pleasant tools for the job.
 
 <div>
 
-  
+
 
 </div>
 
@@ -363,7 +364,7 @@ another time.
 
 <div>
 
-  
+
 
 </div>
 
@@ -375,7 +376,7 @@ I hope this was informative, or at least, entertaining!
 
 <div>
 
-  
+
 
 </div>
 
@@ -387,9 +388,8 @@ I hope this was informative, or at least, entertaining!
 
 <div>
 
-  
+
 
 </div>
 
 </p>
-

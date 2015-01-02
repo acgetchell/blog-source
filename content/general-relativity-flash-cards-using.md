@@ -1,7 +1,7 @@
 Title: General Relativity flash-cards using Anki
 Date: 2013-10-24 05:52
-Author: Adam Getchell (noreply@blogger.com)
-Tags: clojure, general relativity
+Author: Adam Getchell
+Tags: general relativity
 Category: Physics
 Slug: general-relativity-flash-cards-using
 

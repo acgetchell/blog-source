@@ -1,32 +1,33 @@
 Title: A Nobel Pursuit
 Date: 2008-11-12 06:58
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Slug: nobel-pursuit
+Category: Physics
 
 Well, the Nobel Prizewinners are to be announced ~~tomorrow~~Tuesday. In
 the spirit of fun (and to demonstrate how much science really does
 advance), here are some predictions and other fun facts gleaned from
 around the 'Net:  
-  
+
 Can you predict the Nobel Prizewinners in Chemistry & Physics by
 counting citations? Apparently not:  
-  
+
 <http://www.symmetrymagazine.org/breaking/2008/08/27/nobel-prize-citations/>  
-  
+
 Since this is an election year, it's interesting to note that 61 Nobel
 Laureates (including 22 physicists) -- the highest ever -- support
 Barack Obama for President:  
-  
+
 <http://sefora.org/2008/09/25/61-nobel-laureates-in-science-endorse-obama/>  
-  
+
 Perhaps it's because Obama/Biden actually have a [cogent science
 policy](http://pubs.acs.org/cen/news/86/i39/8639notw10.html), and happen
 to believe scientists when they talk about evolution or global warming.  
-  
+
 Interestingly,
 [Reuters](http://uk.reuters.com/article/scienceNews/idUKTRE49088V20081001)
 seems to think citations count for potential Nobel prizewinners:  
-  
+
 [http://physics.about.com/b/2008/10/04/2008-nobel-prize-coming-soon.htm  
 ](http://physics.about.com/b/2008/10/04/2008-nobel-prize-coming-soon.htm)  
 They think the contenders are:  
@@ -37,7 +38,7 @@ They think the contenders are:
 -   **Andre Geim** and Kostya Novoslev for
     [Graphene](http://www.sciencewatch.com/inter/aut/2008/08-aug/08augSWGeim/)
 
-  
+
 [Physics
 World](http://physicsworld.com/blog/2008/10/who_will_win_the_2008_nobel_pr.html)
 offers the following candidates:  
@@ -75,9 +76,9 @@ Who am I going to pick? Well, not because of any insight, but because of
 fondness for the topic I'm going with one of the cosmological
 predictions, either inflation, dark matter, or dark energy. Maybe
 they'll all be grouped together.  
-  
+
 Tune in ~~tomorrow~~Tuesday to see who wins!  
-  
+
 Update: <span style="font-weight: bold;">Nambu</span> (of the
 [Nambu-Goto action](http://en.wikipedia.org/wiki/Nambu-Goto_action) for
 bosonic string theory), <span
@@ -92,4 +93,3 @@ deservedly, for discovery of [spontaneous symmetry
 breaking](http://hyperphysics.phy-astr.gsu.edu/hbase/forces/unify.html).
 
 </p>
-
