@@ -24,7 +24,8 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['gravatar', 'pelican_gist', 'render_math']
 
 # Blogroll
-LINKS = (('Mozilla Science Lab', 'http://mozillascience.org'),)
+LINKS = (('Mozilla Science Lab', 'http://mozillascience.org'),
+         ('Current CDT papers', 'http://arxiv.org/find/all/1/all:+AND+triangulations+AND+causal+dynamical/0/1/0/all/0/1'),)
 
 # Social widget
 SOCIAL = (('AboutMe', 'http://about.me/adamgetchell'),
