@@ -1,6 +1,6 @@
 Title: Reflection tools for F#
 Date: 2011-04-19 08:52
-Author: Adam Getchell (noreply@blogger.com)
+Author: Adam Getchell
 Tags: f#
 Slug: embedding-gists-in-blogger
 Category: Programming

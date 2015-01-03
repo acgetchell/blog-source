@@ -2,8 +2,9 @@ Title: Can LIGO detect a graviton?
 Date: 2011-12-28 00:09
 Author: Adam Getchell
 Category: Physics
-Tags: quantum gravity
+Tags: general relativity
 Slug: can-ligo-detect-graviton
+Summary: A lecture given 10/27/08 by Professor Freeman Dyson of the Institute of Advanced Studies at Princeton, in honor of the 100th anniversary of the founding of the University of California, Davis
 
 A lecture given 10/27/08 by Professor Freeman Dyson of the Institute of
 Advanced Studies at Princeton, in honor of the 100th anniversary of the

@@ -1,7 +1,7 @@
 Title: Undecidability, Regularity, and Decoherence
 Date: 2008-01-22 11:49
 Author: Adam Getchell
-Tags: quantum mechanics, general relativity
+Tags: qft, general relativity
 Slug: undecidability-regularity-and
 Category: Physics
 

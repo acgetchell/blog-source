@@ -1,7 +1,7 @@
 Title: Ultra-strong electric and magnetic fields, monopoles
 Date: 2008-01-22 11:46
 Author: Adam Getchell
-Tags: field theory
+Tags: qft
 Slug: ultra-strong-electric-and-magnetic
 Category: Physics
 

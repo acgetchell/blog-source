@@ -1,7 +1,7 @@
 Title: F#, Regge Calculus, and other interludes
 Date: 2007-11-19 05:39
 Author: Adam Getchell
-Tags: quantum gravity, .net, information theory, thermodynamics, quantum mechanics, f#
+Tags: cdt, .net, information theory, thermodynamics, quantum mechanics, f#
 Slug: f-regge-calculus-and-other-interludes
 Category: Physics
 

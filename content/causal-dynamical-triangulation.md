@@ -1,7 +1,7 @@
 Title: Causal Dynamical Triangulations updates
 Date: 2008-08-01 08:27
 Author: Adam Getchell
-Tags: quantum gravity
+Tags: quantum gravity, cdt
 Slug: causal-dynamical-triangulation
 Category: Physics
 

@@ -1,7 +1,7 @@
 Title: Quantum Parallel Universes
 Date: 2007-09-28 06:35
 Author: Adam Getchell
-Tags: quantum mechanics, SUSY
+Tags: qft, SUSY
 Slug: quantum-parallel-universes
 Category: Physics
 

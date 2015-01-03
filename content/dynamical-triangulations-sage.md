@@ -1,7 +1,7 @@
 Title: Dynamical Triangulations, SAGE
 Date: 2007-12-10 19:09
-Author: Adam Getchell (noreply@blogger.com)
-Tags: SAGE, quantum gravity, python, vmware, ubuntu
+Author: Adam Getchell
+Tags: SAGE, cdt, python, vmware, ubuntu
 Slug: dynamical-triangulations-sage
 Category: Physics
 
