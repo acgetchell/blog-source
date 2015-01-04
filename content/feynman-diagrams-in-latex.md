@@ -1,6 +1,6 @@
 Title: Feynman diagrams in LaTeX
 Date: 2012-09-02 09:15
-Author: Adam Getchell (adam.getchell@gmail.com)
+Author: Adam Getchell
 Tags: latex, qft
 Slug: feynman-diagrams-in-latex
 Category: Physics
