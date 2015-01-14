@@ -31,7 +31,8 @@ LINKS = (('Mozilla Science Lab', 'http://mozillascience.org'),
 SOCIAL = (('AboutMe', 'http://about.me/adamgetchell'),
           ('Twitter', 'https://twitter.com/adamgetchell'),
           ('LinkedIn','http://www.linkedin.com/in/adamgetchell'),
-          ('GitHub', 'http://github.com/acgetchell'),)
+          ('GitHub', 'http://github.com/acgetchell'),
+          ('LastFM', 'http://www.last.fm/user/adamgetchell'),)
 
 DEFAULT_PAGINATION = 5
 
@@ -47,7 +48,7 @@ DISPLAY_ARTICLE_INFO_ON_INDEX = True
 GITHUB_USER = 'acgetchell'
 TWITTER_CARDS = True
 TWITTER_USERNAME = 'adamgetchell'
-AVATAR = 'http://www.gravatar.com/avatar/241de5482fc95fd801aa92ecf35187b9.png'
+AVATAR = 'images/adam_ben.jpg'
 ABOUT_ME = 'Physics and computing'
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
