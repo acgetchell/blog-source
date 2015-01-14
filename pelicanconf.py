@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Adam Getchell'
 SITENAME = u"Adam's Entropy"
-TAGLINE = u"One particular random walk through life"
-SITEURL = ''
+SITESUBTITLE = u"One particular random walk through life"
+SITEURL = 'http://adamgetchell.org'
 
 PATH = 'content'
 
@@ -37,7 +37,7 @@ SOCIAL = (('AboutMe', 'http://about.me/adamgetchell'),
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = False
+#RELATIVE_URLS = True
 
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 20
