@@ -37,7 +37,7 @@ SOCIAL = (('AboutMe', 'http://about.me/adamgetchell'),
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 20
