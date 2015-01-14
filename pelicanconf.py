@@ -21,7 +21,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 THEME = 'pelican-themes/pelican-bootstrap3'
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['gravatar', 'pelican_gist', 'render_math']
+PLUGINS = ['gravatar', 'pelican_gist', 'render_math', 'neighbors']
 
 # Blogroll
 LINKS = (('Mozilla Science Lab', 'http://mozillascience.org'),
@@ -40,7 +40,7 @@ DEFAULT_PAGINATION = 5
 #RELATIVE_URLS = True
 
 TAG_CLOUD_STEPS = 4
-TAG_CLOUD_MAX_ITEMS = 20
+TAG_CLOUD_MAX_ITEMS = 10
 SHOW_ARTICLE_CATEGORY = True
 DISPLAY_BREADCRUMBS = True
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
@@ -52,3 +52,4 @@ AVATAR = 'images/adam_ben.jpg'
 ABOUT_ME = 'Physics and computing'
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+RESPONSIVE_IMAGES = True
