@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Fun with Microsoft Enterprise Library, part 2 - Adam's Entropy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://adamgetchell.org/fun-with-microsoft-enterprise-library.html">
+
+        <meta name="author" content="Adam Getchell" />
+        <meta name="keywords" content=".net" />
+        <meta name="description" content="Okay, I can see that this is going to be a long series …. Here’s what I’m talking about on how to get Visual Studio to see Enterprise Library assemblies without browsing (taken from the GotDotNet workspace patterns &amp; practices: Enterprise Library: Message Boards): “Do you want to see EntLib ..." />
+
+        <meta property="og:site_name" content="Adam's Entropy" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Fun with Microsoft Enterprise Library, part 2"/>
+        <meta property="og:url" content="http://adamgetchell.org/fun-with-microsoft-enterprise-library.html"/>
+        <meta property="og:description" content="Okay, I can see that this is going to be a long series …. Here’s what I’m talking about on how to get Visual Studio to see Enterprise Library assemblies without browsing (taken from the GotDotNet workspace patterns &amp; practices: Enterprise Library: Message Boards): “Do you want to see EntLib ..."/>
+        <meta property="article:published_time" content="2007-09-22" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:tag" content=".net" />
+            <meta property="article:author" content="Adam Getchell" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@adamgetchell">
+        <meta name="twitter:creator" content="@adamgetchell">
+    <meta name="twitter:domain" content="http://adamgetchell.org">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://adamgetchell.org/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://adamgetchell.org/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://adamgetchell.org/theme/css/pygments/native.css" rel="stylesheet">
+        <link href="http://adamgetchell.org/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://adamgetchell.org/theme/css/style.css" type="text/css"/>
+
+        <link href="http://adamgetchell.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy ATOM Feed"/>
+
+
+
+        <link href="http://adamgetchell.org/feeds/programming.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy Programming ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://adamgetchell.org/" class="navbar-brand">
+Adam's Entropy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://adamgetchell.org/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="http://adamgetchell.org/category/physics.html">Physics</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://adamgetchell.org/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="http://adamgetchell.org" title="Adam's Entropy"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="http://adamgetchell.org/category/programming.html" title="Programming">Programming</a></li>
+                <li class="active">Fun with Microsoft Enterprise Library, part&nbsp;2</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://adamgetchell.org/fun-with-microsoft-enterprise-library.html"
+                       rel="bookmark"
+                       title="Permalink to Fun with Microsoft Enterprise Library, part 2">
+                        Fun with Microsoft Enterprise Library, part&nbsp;2
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2007-09-22T23:41:00-07:00"> Sat 22 September 2007</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://adamgetchell.org/tag/net.html">.net</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Okay, I can see that this is going to be a long series&nbsp;&#8230;.  </p>
+<p>Here&#8217;s what I&#8217;m talking about on how to get Visual Studio to see
+Enterprise Library assemblies without browsing (taken from the GotDotNet
+workspace patterns <span class="amp">&amp;</span> practices: Enterprise Library: Message&nbsp;Boards):  </p>
+<p><span class="dquo">&#8220;</span><span style="font-style: italic;">Do you want to see EntLib assemblies
+in Add References message box?</span><br />
+<span style="font-style: italic;">Create a text file named entlib.reg,
+and add this content:</span><br />
+<span style="font-style: italic;">Windows Registry Editor Version&nbsp;5.00</span>  </p>
+<p><span
+style="font-style: italic;">[HKEY_LOCAL_MACHINE\<span class="caps">SOFTWARE</span>\Microsoft\VisualStudio\7.1\AssemblyFolders\Enterprise
+Library]</span><br />
+<span style="font-style: italic;">@=&#8221;C:&#92;Program Files&#92;Microsoft
+Enterprise&nbsp;Library&#92;bin&#92;&#8221;</span>  </p>
+<p><span style="font-style: italic;">Double click on the file and you&#8217;ll be
+asked whether to add this registry key. Click yes, restart vs.net and
+there you go.</span><br />
+<span style="font-style: italic;">(it is assumed that assemblies are in
+their default folder - otherwise, change the path above).</span>&#8221;  </p>
+<p>Sigh. I really really try to avoid the Registry when&nbsp;possible.  </p>
+<p>There&#8217;s another neat trick for sorting out the structure of the
+Enterprise Library: open one of the solutions in Visual Studio, select
+Project-> Visio <span class="caps">UML</span> -> Reverse&nbsp;Engineer.  </p>
+<p>Too bad all it actually does is generate a 75K blank Visio file, because
+Visio is unable to resolve all of the&nbsp;references.  </p>
+<p>I suppose this will work for code that&#8217;s so simple that a <span class="caps">UML</span> diagram
+isn&#8217;t&nbsp;needed.  </p>
+<p>Moving right along, I&#8217;ve also found how to sign all of the Enterprise
+Library Asemblies! You just generate your public/private key pair, and
+then reference them in the GlobalAssemblyInfo.cs file&nbsp;in:  </p>
+<p>C:\Program Files\Microsoft Enterprise Library\src<br />
+This file gets referenced by every project when it&#8217;s compiled.&nbsp;Yay!  </p>
+<p>Except that every project&#8217;s AssemblyInfo.cs contains blank&nbsp;references:  </p>
+<p>[assembly : AssemblyDelaySign(false)]<br />
+[assembly : AssemblyKeyFile(&#8220;&#8221;)]<br />
+[assembly :&nbsp;AssemblyKeyName(&#8220;&#8221;)]  </p>
+<p>Which overwrite what gets pulled in from&nbsp;GlobalAssemblyInfo.cs.  </p>
+<p>So you have to go through every project&#8217;s AssemblyInfo.cs file and
+remove those 3&nbsp;lines.  </p>
+<p>Sigh. There&#8217;s 23 projects in the Security section alone, which is sort
+of the <span style="font-style: italic;">sine qua non</span>for using
+the <span class="caps">EL</span> to begin with, for my&nbsp;purposes.  </p>
+<p>Well, Caching, Configuration, Data, ExceptionHandling, and Logging are
+also&nbsp;useful.  </p>
+<p>One step at a&nbsp;time.  </p>
+<p>I&#8217;ve gotten Logging to work. Unfortunately, every time it logs it throws
+three error&nbsp;messages:  </p>
+<p><span class="messagecontent"><span style="font-style: italic;"><span class="dquo">&#8220;</span>Failed
+to create instances of performance counter &#8216;Distributor: # of Logs
+Distributed/Sec&#8217; - The requested Performance Counter is not a custom
+counter, it has to be initialized as&nbsp;ReadOnly..</span>  </p>
+<p><span style="font-style: italic;">For more information, see Help and
+Support Center at&nbsp;http://go.microsoft.com/fwlink/events.asp.&#8221;</span>  </p>
+<p><span style="font-style: italic;"><span class="dquo">&#8220;</span>Failed to fire the <span class="caps">WMI</span> event
+&#8216;LoggingLogWrittenEvent&#8217;. Exception: System.Exception: This schema for
+this assembly has not been registered with <span class="caps">WMI</span>.</span><br />
+<span style="font-style: italic;">at
+System.Management.Instrumentation.Instrumentation.Initialize(Assembly
+assembly)</span><br />
+<span style="font-style: italic;">at
+System.Management.Instrumentation.Instrumentation.GetInstrumentedAssembly(Assembly
+assembly)</span><br />
+<span style="font-style: italic;">at
+System.Management.Instrumentation.BaseEvent.Fire()</span><br />
+<span style="font-style: italic;">at
+Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.InstrumentedEvent.FireWmiEventCore(BaseEvent&nbsp;baseEvent).</span>  </p>
+<p><span style="font-style: italic;">For more information, see Help and
+Support Center at&nbsp;http://go.microsoft.com/fwlink/events.asp.&#8221;</span>  </p>
+<p>and  </p>
+<p><span style="font-style: italic;"><span class="dquo">&#8220;</span>Failed to create instances of
+performance counter &#8216;Client: # of Logs Written/Sec&#8217; - The requested
+Performance Counter is not a custom counter, it has to be initialized as&nbsp;ReadOnly..</span>  </p>
+<p><span style="font-style: italic;">For more information, see Help and
+Support Center at&nbsp;http://go.microsoft.com/fwlink/events.asp.&#8221;</span>  </p>
+<p>Presumably these counters are installed as part of the <span class="caps">EL</span> service
+installation, but going through the batch file yields for&nbsp;logging:  </p>
+<p>@<span class="caps">ECHO</span>.<br />
+@<span class="caps">ECHO</span> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+@<span class="caps">ECHO</span> Installing Services for the Logging and Instrumentation
+Application Block<br />
+@<span class="caps">ECHO</span> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+@<span class="caps">ECHO</span>.  </p>
+<p>if Exist Microsoft.Practices.EnterpriseLibrary.Logging.dll installutil
+%1 Microsoft.Practices.EnterpriseLibrary.Logging.dll<br />
+@if errorlevel 1 goto&nbsp;:error  </p>
+<p>So I&#8217;d like to break out whatever counters are needed so I can install
+them on the webserver, and ideally, be able to script this installation
+for production code on a production server with an Installer&nbsp;project.  </p>
+<p>Although I&#8217;m strongly tempted to just go back to using my ErrorHandling
+class, which doesn&#8217;t need anything installed&nbsp;anywhere.  </p>
+<p>No, I&#8217;ll persist in using the <span class="caps">EL</span>. I&#8217;m sure there will be a payoff &#8212;
+like extending the Logging class to handle <span class="caps">XML</span>.  </p>
+<p>Of course, to extend the <span class="caps">EL</span> one should be cognizant of all the Unit
+Tests there built to ensure its continued functionality. So I need that
+book on Test Driven Development real soon&nbsp;now.  </p>
+<p>Well, at least I&#8217;m not bored.<br />
+</span></p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'fun-with-microsoft-enterprise-library';
+                var disqus_url = 'http://adamgetchell.org/fun-with-microsoft-enterprise-library.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="images/adam_ben.jpg"/>
+        </p>
+    <p>
+        <strong>About Adam Getchell</strong><br/>
+        Physics and computing
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://about.me/adamgetchell"><i class="fa fa-aboutme-square fa-lg"></i> AboutMe</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/adamgetchell"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="http://www.linkedin.com/in/adamgetchell"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="http://github.com/acgetchell"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="http://www.last.fm/user/adamgetchell"><i class="fa fa-lastfm-square fa-lg"></i> LastFM</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+    </li>
+
+    <li class="list-group-item"><h4><i class="fa fa-twitter fa-lg"></i><span class="icon-label">Latest Tweets</span></h4></li>
+    <div id="twitter_timeline">
+        <a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/adamgetchell" data-widget-id="701556215399194624">Tweets by adamgetchell</a>
+    </div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://mozillascience.org" target="_blank">
+                Mozilla Science Lab
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://arxiv.org/find/all/1/all:+AND+triangulations+AND+causal+dynamical/0/1/0/all/0/1" target="_blank">
+                Current CDT papers
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Adam Getchell
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://adamgetchell.org/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://adamgetchell.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://adamgetchell.org/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = 'http://adamgetchell.org/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'acgetchell',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="http://adamgetchell.org/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>

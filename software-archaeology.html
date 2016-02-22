@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Software Archaeology - Adam's Entropy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://adamgetchell.org/software-archaeology.html">
+
+        <meta name="author" content="Adam Getchell" />
+        <meta name="description" content="Vernor Vinge prophetically wrote of a time when programmer-archaeologists maintained the fabric of civilization by diving into and modifying legacy code which ran the systems that society depended upon. Various other folks have picked up on this notion, from the [serious](http://java.sys-con.com/node/487614) to the [humorous ..." />
+
+        <meta property="og:site_name" content="Adam's Entropy" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Software Archaeology"/>
+        <meta property="og:url" content="http://adamgetchell.org/software-archaeology.html"/>
+        <meta property="og:description" content="Vernor Vinge prophetically wrote of a time when programmer-archaeologists maintained the fabric of civilization by diving into and modifying legacy code which ran the systems that society depended upon. Various other folks have picked up on this notion, from the [serious](http://java.sys-con.com/node/487614) to the [humorous ..."/>
+        <meta property="article:published_time" content="2011-04-11" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:author" content="Adam Getchell" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@adamgetchell">
+        <meta name="twitter:creator" content="@adamgetchell">
+    <meta name="twitter:domain" content="http://adamgetchell.org">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://adamgetchell.org/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://adamgetchell.org/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://adamgetchell.org/theme/css/pygments/native.css" rel="stylesheet">
+        <link href="http://adamgetchell.org/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://adamgetchell.org/theme/css/style.css" type="text/css"/>
+
+        <link href="http://adamgetchell.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy ATOM Feed"/>
+
+
+
+        <link href="http://adamgetchell.org/feeds/programming.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy Programming ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://adamgetchell.org/" class="navbar-brand">
+Adam's Entropy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://adamgetchell.org/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="http://adamgetchell.org/category/physics.html">Physics</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://adamgetchell.org/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="http://adamgetchell.org" title="Adam's Entropy"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="http://adamgetchell.org/category/programming.html" title="Programming">Programming</a></li>
+                <li class="active">Software&nbsp;Archaeology</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://adamgetchell.org/software-archaeology.html"
+                       rel="bookmark"
+                       title="Permalink to Software Archaeology">
+                        Software&nbsp;Archaeology
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-04-11T22:19:00-07:00"> Mon 11 April 2011</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><a href="http://en.wikipedia.org/wiki/Vernor_Vinge">Vernor Vinge</a> prophetically
+<a href="http://books.slashdot.org/story/03/09/18/0411259/Review-A-Fire-Upon-the-Deep-Special-Edition">wrote of a
+time</a>
+when programmer-archaeologists maintained the fabric of civilization by
+diving into and modifying legacy code which ran the systems that society
+depended&nbsp;upon.</p>
+<div>
+
+
+
+</div>
+
+<div>
+
+Various other folks have picked up on this notion, from the
+[serious](http://java.sys-con.com/node/487614) to the
+[humorous](http://giant-communist-robots.com/?p=154). Here, though, I&#8217;ll
+talk about this from my own perspective (which is what you came here
+for, right?).
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+[Kernighan&#8217;s](http://www.ieee.org/portal/cms_docs_societies/sscs/PrintEditions/200804.pdf)
+saw goes that debugging code is twice as hard as writing it; therefore
+we ought to keep our meaning clear and our code as simple as possible.
+How to do so?
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+There are clear debates about that: [functional vs.
+declarative](http://msdn.microsoft.com/en-us/library/bb669144.aspx),
+[procedural vs.
+object-oriented](http://www.virtuosimedia.com/dev/php/procedural-vs-object-oriented-programming-oop),
+not to mention [Patterns <span class="amp">&amp;</span>
+Anti-Patterns](http://books.google.com/books?hl=en&lr=&id=HBAuixGMYWEC&oi=fnd&pg=<span class="caps">PA383</span>&dq=patterns+and+antipatterns&ots=emzw4QN8Dj&sig=AFOJ5TeY4zHfa1pCKky8ux_X9hQ#v=onepage&q=patterns%20and%20antipatterns&f=false),
+[Dependency Injection/Loose
+Coupling](http://martinfowler.com/articles/injection.html),
+[Aspect-Oriented
+Programming](http://en.wikipedia.org/wiki/Aspect-oriented_programming),
+etc. etc. These can be very fun to get into and there are diverse and
+subtle points all around, that I won&#8217;t attempt to do them justice here
+but if you&#8217;ve a free week or two read any of the above links and the
+next five references thereafter and you&#8217;ll come away more enlightened,
+or more confused.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+But in the meantime, you&#8217;ve either got to a) emit working code or b)
+manage those who do a). And if you could do so without too badly
+embarrassing yourself in the future (which is nigh impossible), or at
+least, be willing to chalk them up as learning experiences, you&#8217;re well
+on your way to some sort of nirvana of ineffable, crystallized logic
+which is a perfect solution to your problem.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+(Getting a clear problem statement itself being at least half of the
+battle and most of the difficulty, given business processes that aren&#8217;t
+well understood, or mutate depending upon who&#8217;s doing them or in which
+context. But that discussion more properly belongs in the realm of
+project management and business analysis, and won&#8217;t be further remarked
+upon here.)
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+If you&#8217;re not a coder yourself (or horribly out of date), you can still
+make a fair crack at judging the product by the team. [The Mythical
+Man-Month](http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959)
+is the canonical reference, but [Joel
+Spolsky&#8217;s](http://www.joelonsoftware.com/) [Joel
+Test](http://www.joelonsoftware.com/articles/fog0000000043.html) is
+pretty concise, descriptive, and useful.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+Archaeology can imply adventurous, sunburned types digging around fossil
+layers high in vast dusty mesas of stratified rock. And truth be told,
+that&#8217;s not a bad analogy for the cacophony of systems that the average
+<span class="caps">IT</span> organization has inherited, cobbled together, purchased (often from a
+now-defunct vendor), or perhaps in a fit of creativity &#8212; produced.
+After all, post dot-com, [Greenfield
+development](http://footheory.com/blogs/donnfelker/archive/2008/05/05/software-development-greeenfield-vs-brownfield.aspx)
+is rare.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+But Brownfield development is often so painful that most developers will
+throw up their hands and rewrite from scratch, rather than attempting to
+piece together the workings of an often poorly documented system written
+with &#8220;ancient&#8221; methods/languages.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+Hence, onto the first item on the Joel Test: source control.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+But not just any source control. [GitHub](https://github.com/).
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+Why GitHub? Well, first, it has the elusive &#8220;Alpha Coder mindshare&#8221;.
+While it may not matter one way or another to your business that the
+Linux kernel, Git itself, jQuery, Ruby on Rails, and a host of other
+important projects exist on GitHub, it matters to your programmers,
+whether they know it or not (and the good ones will know it).
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+All of these actively maintained open source projects provide something
+more interesting than mindshare: examples. Pick a programming language,
+and you will very likely find an interesting project or two on GitHub
+that has something worth learning. It may even prove to be the Rosetta
+stone of programming languages &#8212; you may find solutions to the same
+problem in many different programming languages.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+Second, [Social
+Coding](http://radar.oreilly.com/2009/01/github-making-code-more-social.html).
+Everyone knows of the usefulness of social networks &#8212; they existed
+before, but it&#8217;s the tools that made them marketable/actionable. Social
+coding in GitHub takes the usual forms &#8212; followers, blogs, wikis,
+issues, teams, organizations &#8212; plus some more useful ones (e.g. the
+[GitHub <span class="caps">API</span>](http://develop.github.com/)).
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+We used Team Foundation Server. It was a nice tool in our .<span class="caps">NET</span>
+development shop &#8212; a bit painful to setup with it&#8217;s dependence on
+SharePoint, but useful. However, it didn&#8217;t scale too well in terms of
+collaborators. We needed to add them as users into Active Directory,
+fuss about with SharePoint and licensing, and so forth.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+So next we tried [CodePlex](http://www.codeplex.com/). CodePlex was,
+essentially, <span class="caps">TFS</span> in the cloud, and it mostly worked. There were capacity
+issues, and it wasn&#8217;t always friendly with non .<span class="caps">NET</span> languages, but the
+main reason we didn&#8217;t adopt it wholesale was:
+
+</div>
+
+<div>
+
+1.  No way to make private repositories
+2.  Often painful to connect into
+3.  Went down/was slow often enough that we didn&#8217;t want to rely on it.
+
+<div>
+
+This really illustrates the third virtue of GitHub, that it&#8217;s a true
+cloud service &#8212; but cloud computing is all the hype right now and I
+really wanted to illustrate it&#8217;s particular benefits in this instance.
+
+</div>
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+In going with GitHub, we created an organization for our, well,
+organization. This gives us several important advantages over CodePlex:
+
+</div>
+
+<div>
+
+1.  Private repositories
+2.  Teams
+3.  Unlimited collaborators (in particular, we can mix and match between
+    general GitHub accounts and team members)
+4.  Blogs, Wikis, Gists, Issue Trackers with voting, per-line file
+    commenting, and other social features
+5.  Works well with any programming language
+6.  Fast, decentralized development (Git works locally, so you can get
+    on a plane, code, and upload your changes once you&#8217;ve got internet
+    access)
+7.  Reliable versioning (Git uses hashes for files)
+8.  Works well with any <span class="caps">OS</span>/<span class="caps">IDE</span> (Git has integration with Visual Studio,
+    Eclipse, XCode plus command-line versions in most every <span class="caps">OS</span>)
+9.  Git is a well-regarded distributed version control system (<span class="caps">DCVS</span>)
+
+<div>
+
+My programming team ported projects over from <span class="caps">TFS</span> and CodePlex in under
+a day. By following projects, I can watch check-ins, view version
+differences, open/close issues, and do all the usual software management
+stuff without getting in the way. (Or better yet, delegate.)
+
+</div>
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+The fees are pretty nominal (organizations get charged based on the
+numbers of private repositories they want; public ones are free). GitHub
+is hosted by RackSpace, so the reliability has been better than our
+in-house <span class="caps">TFS</span> boxes. Today I just added someone outside our organization
+to one of our projects with minimal hassle.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+If you&#8217;re going to be digging up fossilized code, Git and GitHub are
+fairly pleasant tools for the job.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+Look at the time! This isn&#8217;t really everything I wanted to say, but I&#8217;ve
+probably said enough for now (and I have other pressing priorities
+including my own research), so I&#8217;ll leave further pontificating for
+another time.
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+I hope this was informative, or at least, entertaining!
+
+</div>
+
+<div>
+
+
+
+</div>
+
+<div>
+
+(You can find me on GitHub [here](https://github.com/acgetchell)!)
+
+</div>
+
+<div>
+
+
+
+</div>
+
+</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'software-archaeology';
+                var disqus_url = 'http://adamgetchell.org/software-archaeology.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="images/adam_ben.jpg"/>
+        </p>
+    <p>
+        <strong>About Adam Getchell</strong><br/>
+        Physics and computing
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://about.me/adamgetchell"><i class="fa fa-aboutme-square fa-lg"></i> AboutMe</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/adamgetchell"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="http://www.linkedin.com/in/adamgetchell"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="http://github.com/acgetchell"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="http://www.last.fm/user/adamgetchell"><i class="fa fa-lastfm-square fa-lg"></i> LastFM</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+    </li>
+
+    <li class="list-group-item"><h4><i class="fa fa-twitter fa-lg"></i><span class="icon-label">Latest Tweets</span></h4></li>
+    <div id="twitter_timeline">
+        <a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/adamgetchell" data-widget-id="701556215399194624">Tweets by adamgetchell</a>
+    </div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://mozillascience.org" target="_blank">
+                Mozilla Science Lab
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://arxiv.org/find/all/1/all:+AND+triangulations+AND+causal+dynamical/0/1/0/all/0/1" target="_blank">
+                Current CDT papers
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Adam Getchell
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://adamgetchell.org/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://adamgetchell.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://adamgetchell.org/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = 'http://adamgetchell.org/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'acgetchell',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="http://adamgetchell.org/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>

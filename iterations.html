@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Iterations - Adam's Entropy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://adamgetchell.org/iterations.html">
+
+        <meta name="author" content="Adam Getchell" />
+        <meta name="keywords" content="macos,c++,octopress,prismbreak,bjj" />
+        <meta name="description" content="It’s been quite awhile since the last post, with lots of changes. I’ve: Converted to MacOS Changed my research codebase to C++ Migrated this blog from Blogger to Octopress Started on the path towards #prismbreak Gotten my blue belt in BJJ I’ll say a little about each ..." />
+
+        <meta property="og:site_name" content="Adam's Entropy" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Iterations"/>
+        <meta property="og:url" content="http://adamgetchell.org/iterations.html"/>
+        <meta property="og:description" content="It’s been quite awhile since the last post, with lots of changes. I’ve: Converted to MacOS Changed my research codebase to C++ Migrated this blog from Blogger to Octopress Started on the path towards #prismbreak Gotten my blue belt in BJJ I’ll say a little about each ..."/>
+        <meta property="article:published_time" content="2013-12-07" />
+            <meta property="article:section" content="misc" />
+            <meta property="article:tag" content="macos" />
+            <meta property="article:tag" content="c++" />
+            <meta property="article:tag" content="octopress" />
+            <meta property="article:tag" content="prismbreak" />
+            <meta property="article:tag" content="bjj" />
+            <meta property="article:author" content="Adam Getchell" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@adamgetchell">
+        <meta name="twitter:creator" content="@adamgetchell">
+    <meta name="twitter:domain" content="http://adamgetchell.org">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://adamgetchell.org/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://adamgetchell.org/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://adamgetchell.org/theme/css/pygments/native.css" rel="stylesheet">
+        <link href="http://adamgetchell.org/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://adamgetchell.org/theme/css/style.css" type="text/css"/>
+
+        <link href="http://adamgetchell.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy ATOM Feed"/>
+
+
+
+        <link href="http://adamgetchell.org/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy misc ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://adamgetchell.org/" class="navbar-brand">
+Adam's Entropy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="http://adamgetchell.org/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="http://adamgetchell.org/category/physics.html">Physics</a>
+                        </li>
+                        <li >
+                            <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://adamgetchell.org/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="http://adamgetchell.org" title="Adam's Entropy"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="http://adamgetchell.org/category/misc.html" title="misc">misc</a></li>
+                <li class="active">Iterations</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://adamgetchell.org/iterations.html"
+                       rel="bookmark"
+                       title="Permalink to Iterations">
+                        Iterations
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-12-07T18:56:50-08:00"> Sat 07 December 2013</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="http://adamgetchell.org/category/misc.html">misc</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://adamgetchell.org/tag/macos.html">macos</a>
+        /
+	<a href="http://adamgetchell.org/tag/c.html">c++</a>
+        /
+	<a href="http://adamgetchell.org/tag/octopress.html">octopress</a>
+        /
+	<a href="http://adamgetchell.org/tag/prismbreak.html">prismbreak</a>
+        /
+	<a href="http://adamgetchell.org/tag/bjj.html">bjj</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>It&#8217;s been quite awhile since the last post, with lots of changes.&nbsp;I&#8217;ve:</p>
+<ul>
+<li>Converted to&nbsp;MacOS</li>
+<li>Changed my research codebase to&nbsp;C++</li>
+<li>Migrated this blog from Blogger to&nbsp;Octopress</li>
+<li>Started on the path towards <a href="https://app.net/search/?type=posts&amp;q=%23prismbreak">#prismbreak</a></li>
+<li>Gotten my blue belt in <span class="caps">BJJ</span></li>
+</ul>
+<p>I&#8217;ll say a little about each of these in&nbsp;turn.</p>
+<!--more-->
+
+<h2>MacOS++</h2>
+<p>First, for scientific research MacOS &lt;&nbsp;(Windows)++.</p>
+<p>I&#8217;ve tried both, I simply get more done in MacOS. Mainly, it&#8217;s because there&#8217;s generations of Unix tools I can still use in an honest bash shell. <a href="https://github.com/technicalpickles/homesick">Homesick</a> is simply lovely for managing your dotfiles, and <a href="https://github.com/revans/bash-it">bash-it</a> is another awesome shell configuration management tool. I pretty much live in <a href="https://github.com/acgetchell">GitHub</a> for anything public (research papers and code, presentations, work projects, and this blog) and with tools like <a href="https://github.com/mxcl/homebrew">Homebrew</a> I can restore my development environment and files on any Mac I care to just by running a shell&nbsp;script.</p>
+<p>Second, any large complex pieces of software that I find worth purchasing such as Mathematica, Maple, Office, MindNode Pro, Parallels, <a href="http://www.sublimetext.com">SublimeText</a>, or <a href="https://agilebits.com/onepassword">1Password</a> already runs fine on MacOS. As do myriads of other useful free or open source tools such as (let me look at my Dock) <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, <a href="https://www.torproject.org">Tor</a>, <a href="http://kapeli.com/dash">DashDoc</a>, <a href="http://mac.github.com">GitHub</a>, <a href="http://www.lighttable.com">LightTable</a>, <a href="https://evernote.com">EverNote</a>, <a href="https://www.zotero.org">Zotero</a>, <a href="http://ankisrs.net">Anki</a>, and <a href="http://www.truecrypt.org">TrueCrypt</a>. And then there&#8217;s the software Apple bundles such as XCode, iTunes, iMessage, iWork, iMovie, and Garage band. Let&#8217;s not forget that any non-console games I care about work great on <a href="http://us.battle.net/en/">Battle.Net</a> or <a href="http://store.steampowered.com">Steam</a>. Or that the AppStore keeps paid apps in the cloud, and Homebrew/Homesick keeps the rest. Finally, if there are any Windows tools I absolutely have to have such as <a href="http://www.visualstudio.com">Visual Studio</a> or modern versions of Outlook, <a href="http://www.parallels.com">Parallels</a> works&nbsp;dandy.</p>
+<p>Now, putting on my <span class="caps">IT</span> hat for a moment, if you are in a corporate environment and don&#8217;t care one whit about the command line, then Windows is the best for you. Or rather, you&#8217;re probably indifferent (although you may want <em>teh shiny</em>), but for your tech staff, Windows machines can be managed by the thousands with relative ease. Microsoft actually supports doing so in an efficient business fashion. Apple simply doesn&#8217;t care about the enterprise space, and <a href="https://www.usenix.org/conference/lisa13/managing-macs-google-scale">Google&#8217;s</a> <a href="https://code.google.com/p/google-macops/">toolkit</a> doesn&#8217;t quite fill in the gaps (although I am sure that <a href="https://puppetlabs.com">Puppet</a> masters will disagree with&nbsp;me).</p>
+<p>Also, if you live in <a href="http://www.windowsazure.com/en-us/">Azure</a> or Visual Studio or like the <a href="http://www.microsoft.com/surface/en-us">Surface</a> hardware (and they are interesting) Windows has got it going (although some of us just buy Macs and load Windows, because the hardware is still <a href="http://www.apple.com/mac/">shiny</a>).</p>
+<p>It goes without saying that if you&#8217;re one of those folks that love rolling your own <span class="caps">OS</span> and hardware, Linux is for you. Most of us, I suspect, simply need to get things done. Hence the resurgence in MacOS&nbsp;share.</p>
+<h2>C++</h2>
+<p>Some of you may remember that I&#8217;m working on <a href="http://arxiv.org/abs/hep-th/0105267">quantum gravity</a>. Now it turns out that for the kinds of things I want to do &#8212; construct simplicial manifolds by the thousands and manipulate their geometry to insert masses and other objects; then read off the various attributes of these spacetimes and the objects therein &#8212; I am going very far down a very deep rabbit hole named <a href="http://en.wikipedia.org/wiki/Computational_geometry">computational geometry</a>.</p>
+<p>But lo, there was light and illumination in the dark tunnels of my madness, and its name is <a href="http://www.cgal.org"><span class="caps">CGAL</span></a>.</p>
+<p>And <span class="caps">CGAL</span> is written in <a href="http://isocpp.org">C++</a>.</p>
+<p>(Oh, sure, there are <a href="https://code.google.com/p/cgal-bindings/">Python bindings</a> too. But they don&#8217;t cover everything, and I haven&#8217;t tested all of their&nbsp;functions.)</p>
+<p>But now that I&#8217;m down one rabbit hole, I may as well continue, and I&#8217;ve found much to my surprise I am enjoying <a href="http://www.cprogramming.com">re-learning</a> and using C++. Luckily for me, the C++11 standard is here, and C++ really does feel like another language. <span class="caps">CGAL</span> makes fundamental use of generic programming, and the toolchain has gotten better too. With <span class="caps">CGAL</span>, C++, <a href="http://www.cmake.org">CMake</a>, <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a> and friends I am <a href="http://www.literateprogramming.com">literate-ly</a> <a href="http://pragprog.com/book/lotdd/modern-c-programming-with-test-driven-development">test-kinda-driven developing</a> my way for great&nbsp;good.</p>
+<p><a href="http://clojure.org">Clojure</a> and <a href="http://www.sbcl.org">Lisp</a> are still lovely. But I can generate 5 million simplex complexes in 10-50 seconds on just my laptop, and if there ever was a need for speed and parallelization I have it. (Ah, <a href="http://julialang.org">julia</a>, you are a lovely language, Y U No compile on MacOS?) And maybe someday we&#8217;ll have Quantum Gravity on your Desktop courtesy of <a href="http://boinc.berkeley.edu"><span class="caps">BOINC</span></a>.</p>
+<h2>Octopress++</h2>
+<p>I <a href="http://toamitkumar.com/blog/2012/04/19/migrate-from-blogger-to-octopress-step-by-step-guide/">moved from Blogger</a> to <a href="http://octopress.org">Octopress</a> for a number of&nbsp;reasons.</p>
+<ul>
+<li>Octopress is open source, works using git, and works well on GitHub. There are a ton of <a href="http://octopress.org/docs/plugins/">plug-ins</a> and it&#8217;s easy to write your&nbsp;own.</li>
+<li>I want to <a href="https://eschnou.com/entry/implementing-prism-break-62-25013.html">reclaim my network identity</a>, and a platform that I can regenerate anyplace with just a <code>git pull</code></li>
+<li>Mirroring the move to C++, this blog is written very infrequently but read, well more often than it is written. So the overhead of a database and a dynamic site is not worth&nbsp;it.</li>
+<li>Did I mention it works in git and GitHub? I live there these days. And the <a href="https://github.com/revans/bash-it/blob/master/aliases/available/git.aliases.bash">bash-it git aliases</a>&nbsp;rock!</li>
+<li><code>rake preview</code> <code>rake generate</code> <code>rake deploy</code> then <code>gall</code> <code>gca</code> <code>gpo source</code> is a lovely&nbsp;workflow.</li>
+<li>Lot&#8217;s of <a href="http://www.lucypark.kr/blog/2013/02/25/mathjax-kramdown-and-octopress/">resources</a> <a href="http://jekyllrb.com">to</a> <a href="https://github.com/robertkowalski/octopress-coderwall">get</a> <a href="http://asaf.github.io/blog/2013/07/08/blogging-with-octopress-add-about-page/">going</a>.</li>
+</ul>
+<h2>Prismbreak++</h2>
+<p>We <a href="https://www.aclu.org/technology-and-liberty/internet-privacy">all</a> <a href="https://www.eff.org/nsa-spying">kinda</a> <a href="http://www.foxnews.com/politics/2013/11/19/docs-say-nsa-repeatedly-assured-court-it-would-stop-surveillance-rules">knew</a> <a href="http://www.wired.com/threatlevel/2012/03/ff_nsadatacenter/">it</a>. The internet is a vast info-trawl for almost anything, but especially <a href="http://lifehacker.com/5697167/if-youre-not-paying-for-it-youre-the-product">all the private info people are trading away for services</a>. Getting your own independent network identity is just the <a href="https://prism-break.org">first step</a>, but there are many, many others (such as using <a href="http://www.truecrypt.org">TrueCrypt</a> for any cloud file storage on any files you care to keep private). There are also quite a few inconviences; after all there&#8217;s a reason folks use the privacy-invading &#8220;<a href="http://lifehacker.com/5697167/if-youre-not-paying-for-it-youre-the-product">free</a>&#8221; services, and no I don&#8217;t want Linux for my primary laptop. I&#8217;ll (possibly) have more to say on this&nbsp;later.</p>
+<p>(If you <em>are</em> going to pick an operating system for privacy, the best choice is <a href="http://www.openbsd.org">OpenBSD</a>.)</p>
+<h2>Martial&nbsp;Arts++</h2>
+<p>I&#8217;ve been practicing martial arts of various types for quite awhile now. I&#8217;m fairly highly ranked in a&nbsp;few.</p>
+<p>But the empirical evidence is in, and it is&nbsp;this:</p>
+<p>To fight effectively, you need awareness, strength, quickness, toughness, calmness, cardio, and a whole host of attributes often listed on <span class="caps">RPG</span> sheets. To which skill in striking, grappling, and on the ground are&nbsp;musts.</p>
+<p>I love Taekwondo and it&#8217;s spin kicks, but I am not deluding myself. You simply don&#8217;t learn to deal with most other forms of striking. You will have beautiful kicks, but someone with a few months of boxing will punch you in the face quite easily. And of course, any type of grappler that closes the distance (or, anytime you miss) will grab hold of you to your&nbsp;detriment.</p>
+<p>I learned Judo and love the throws, but I&#8217;d rate it below Wrestling and Sambo in effectiveness. Primarily due to the new rules changes which forbid wrestling-style double and single leg&nbsp;takedowns.</p>
+<p>And on the ground, of course, Brazilian Jiu-Jitsu is&nbsp;king.</p>
+<p>All of these statements are pretty easily tested. You can personally test it by going to boxing clubs, wrestling workouts, and <span class="caps">BJJ</span> gyms and see how you fare in these areas. Or you can just watch <span class="caps">UFC</span> and see professionals do the&nbsp;same.</p>
+<p>And if you object that all of these places have rules, and aren&#8217;t a real fight: please tell me why you think various dirty tricks will win the day for you, especially when you&#8217;re in an inferior position where your opponent can do the same back to you (but 10x&nbsp;worse).</p>
+<p>I teach Hapkido at the university, and I&#8217;ve always enjoyed that Hapkidoja <em>did</em> learn techniques in all of these areas. I competed in Taekwondo and Judo, and Hapkido synthesized them all together. It was good for practical self-defense. I try to teach it as&nbsp;such.</p>
+<p>(Yes, martial arts with sporting equivalents are superior. Nothing beats realistic&nbsp;practice.)</p>
+<p>But times change and things develop, and it&#8217;s time to adapt and learn what works. And my <a href="http://fabiopradobjj.com"><span class="caps">BJJ</span> academy</a>, <a href="http://fabiopradobjj.com/about-fabio-prad0/">professor</a>, and jiu-jitsu family&nbsp;rock!</p>
+<p>Also, competing in <span class="caps">BJJ</span> is scary&nbsp;fun!</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'iterations';
+                var disqus_url = 'http://adamgetchell.org/iterations.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="images/adam_ben.jpg"/>
+        </p>
+    <p>
+        <strong>About Adam Getchell</strong><br/>
+        Physics and computing
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://about.me/adamgetchell"><i class="fa fa-aboutme-square fa-lg"></i> AboutMe</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/adamgetchell"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="http://www.linkedin.com/in/adamgetchell"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="http://github.com/acgetchell"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="http://www.last.fm/user/adamgetchell"><i class="fa fa-lastfm-square fa-lg"></i> LastFM</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+    </li>
+
+    <li class="list-group-item"><h4><i class="fa fa-twitter fa-lg"></i><span class="icon-label">Latest Tweets</span></h4></li>
+    <div id="twitter_timeline">
+        <a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/adamgetchell" data-widget-id="701556215399194624">Tweets by adamgetchell</a>
+    </div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://mozillascience.org" target="_blank">
+                Mozilla Science Lab
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://arxiv.org/find/all/1/all:+AND+triangulations+AND+causal+dynamical/0/1/0/all/0/1" target="_blank">
+                Current CDT papers
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Adam Getchell
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://adamgetchell.org/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://adamgetchell.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://adamgetchell.org/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = 'http://adamgetchell.org/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'acgetchell',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="http://adamgetchell.org/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
