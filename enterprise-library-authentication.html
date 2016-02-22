@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Enterprise Library authentication - Adam's Entropy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://adamgetchell.org/enterprise-library-authentication.html">
+
+        <meta name="author" content="Adam Getchell" />
+        <meta name="keywords" content=".net" />
+        <meta name="description" content="Doug Rohrer, one of Avanade guys who worked on the Enterprise Library, has posted a fantastic End to End Enterprise Library project which incorporates the EL into ASP.NET and Winforms applications. Using Collin Collier’s wonderful Copy Source As HTML makes blogging the code much easier. Looking at Doug ..." />
+
+        <meta property="og:site_name" content="Adam's Entropy" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Enterprise Library authentication"/>
+        <meta property="og:url" content="http://adamgetchell.org/enterprise-library-authentication.html"/>
+        <meta property="og:description" content="Doug Rohrer, one of Avanade guys who worked on the Enterprise Library, has posted a fantastic End to End Enterprise Library project which incorporates the EL into ASP.NET and Winforms applications. Using Collin Collier’s wonderful Copy Source As HTML makes blogging the code much easier. Looking at Doug ..."/>
+        <meta property="article:published_time" content="2007-09-22" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:tag" content=".net" />
+            <meta property="article:author" content="Adam Getchell" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@adamgetchell">
+        <meta name="twitter:creator" content="@adamgetchell">
+    <meta name="twitter:domain" content="http://adamgetchell.org">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://adamgetchell.org/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://adamgetchell.org/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://adamgetchell.org/theme/css/pygments/native.css" rel="stylesheet">
+        <link href="http://adamgetchell.org/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://adamgetchell.org/theme/css/style.css" type="text/css"/>
+
+        <link href="http://adamgetchell.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy ATOM Feed"/>
+
+
+
+        <link href="http://adamgetchell.org/feeds/programming.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy Programming ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://adamgetchell.org/" class="navbar-brand">
+Adam's Entropy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://adamgetchell.org/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="http://adamgetchell.org/category/physics.html">Physics</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://adamgetchell.org/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="http://adamgetchell.org" title="Adam's Entropy"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="http://adamgetchell.org/category/programming.html" title="Programming">Programming</a></li>
+                <li class="active">Enterprise Library&nbsp;authentication</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://adamgetchell.org/enterprise-library-authentication.html"
+                       rel="bookmark"
+                       title="Permalink to Enterprise Library authentication">
+                        Enterprise Library&nbsp;authentication
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2007-09-22T23:40:00-07:00"> Sat 22 September 2007</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://adamgetchell.org/tag/net.html">.net</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><a href="http://weblogs.asp.net/drohrer/">Doug Rohrer</a>, one of
+<a href="http://www.avanade.com/">Avanade</a> guys who worked on the Enterprise
+Library, has posted a fantastic End to End Enterprise Library project
+which incorporates the <span class="caps">EL</span> into <span class="caps">ASP</span>.<span class="caps">NET</span> and Winforms&nbsp;applications.  </p>
+<p>Using Collin Collier&#8217;s wonderful <a href="http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/">Copy Source As
+<span class="caps">HTML</span></a>
+makes blogging the code much&nbsp;easier.  </p>
+<p>Looking at Doug&#8217;s work, we run into the common pattern of writing a base
+page class which all asp.net pages inherit. Then he overrides the OnInit
+function to kickstart&nbsp;authentication.  </p>
+<p>I&#8217;ve been using an <a href="http://support.microsoft.com/default.aspx?scid=kb;%5BLN%5D;Q307996"><span class="caps">ASP</span>.<span class="caps">NET</span> Http
+Module</a>
+to trap OnAuthenticate, but this is an interesting approach. Here&#8217;s
+Dougs BasePage&nbsp;class:  </p>
+<div class="cf">
+
+<span class="cb1">using</span> System;
+
+<span class="cb1">using</span>
+Microsoft.Practices.EnterpriseLibrary.Security;
+
+<span class="cb1">using</span> SecCache =
+Microsoft.Practices.EnterpriseLibrary.Security.Cache;
+
+<span class="cb1">using</span>
+Microsoft.Practices.EnterpriseLibrary.Configuration;
+
+<span class="cb1">using</span> System.Web.Security;
+
+<span class="cb1">using</span> System.Security.Principal;
+
+<span class="cb1">using</span> EntLibCommonCSharp;
+
+ 
+
+ 
+
+<span class="cb1">namespace</span> EntLibWebCSharp
+
+{
+
+    <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+    <span class="cb2">///</span><span class="cb3"> Summary description
+for BasePage.</span>
+
+    <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+    <span class="cb1">public</span> <span class="cb1">class</span>
+BasePage: System.Web.<span class="caps">UI</span>.Page
+
+    {
+
+ 
+
+<span class="cb1">        \#region</span> Private Variables
+
+ 
+
+        <span class="cb1">private</span> IAuthenticationProvider
+\_authenProvider;
+
+        <span class="cb1">private</span> IAuthorizationProvider
+\_authorProvider;
+
+        <span class="cb1">private</span> IRolesProvider \_rolesProvider;
+
+        <span class="cb1">private</span> ISecurityCacheProvider
+\_secCacheProvider;
+
+        <span class="cb1">private</span> IPrincipal \_principal;
+
+        <span class="cb1">private</span>
+EntLibCommonCSharp.AppConfigData \_config;
+
+ 
+
+<span class="cb1">        \#endregion</span>
+
+ 
+
+<span class="cb1">        \#region</span> Public Properties
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> An Enterprize
+Library Authentication Provider instance. </span>
+
+        <span class="cb2">///</span><span class="cb3"> Used to determine
+if a user&#8217;s credentials are valid.</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb1">internal</span> IAuthenticationProvider
+AuthenProvider {
+
+            <span class="cb1">get</span> {
+
+                <span class="cb1">if</span> (<span
+class="cb1">null</span>==\_authenProvider) {
+
+                    \_authenProvider =
+AuthenticationFactory.GetAuthenticationProvider();
+
+                }
+
+                <span class="cb1">return</span> \_authenProvider;
+
+            }
+
+        }
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> An Enterprize
+Library Authorization Provider instance. </span>
+
+        <span class="cb2">///</span><span class="cb3"> Used to determine
+if a user is permitted to perform a certain action.</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb1">internal</span> IAuthorizationProvider
+AuthorProvider {
+
+            <span class="cb1">get</span> {
+
+                <span class="cb1">if</span> (<span
+class="cb1">null</span>==\_authorProvider) {
+
+                    \_authorProvider =
+AuthorizationFactory.GetAuthorizationProvider();
+
+                }
+
+                <span class="cb1">return</span> \_authorProvider;
+
+            }
+
+        }
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> An Enterprize
+Library Roles Provider instance. </span>
+
+        <span class="cb2">///</span><span class="cb3"> Used to retrieve
+a principal object given an identity.</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb1">internal</span> IRolesProvider RolesProvider {
+
+            <span class="cb1">get</span> {
+
+                <span class="cb1">if</span> (<span
+class="cb1">null</span>==\_rolesProvider) {
+
+                    \_rolesProvider = RolesFactory.GetRolesProvider();
+
+                }
+
+                <span class="cb1">return</span> \_rolesProvider;
+
+            }
+
+        }
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> An Enterprize
+Library Security Cache Provider instance.</span>
+
+        <span class="cb2">///</span><span class="cb3"> Used to store and
+retrieve a principal object given a security token.</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb1">internal</span> ISecurityCacheProvider
+SecCacheProvider {
+
+            <span class="cb1">get</span> {
+
+                <span class="cb1">if</span> (<span
+class="cb1">null</span>==\_secCacheProvider) {
+
+                    \_secCacheProvider =
+SecurityCacheFactory.GetSecurityCacheProvider();
+
+                }
+
+                <span class="cb1">return</span> \_secCacheProvider;
+
+            }
+
+        }
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> The current
+principal</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb1">internal</span> IPrincipal Principal {
+
+            <span class="cb1">get</span> {
+
+                <span class="cb1">return</span> \_principal;
+
+            }
+
+        }
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> Provides easy
+access to configuration data in the application config file.</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb1">internal</span> AppConfigData Config {
+
+            <span class="cb1">get</span> {
+
+                <span class="cb1">if</span> (<span
+class="cb1">null</span>==\_config) {
+
+                    \_config =
+(AppConfigData)ConfigurationManager.GetConfiguration(AppConfigManager.SectionName);
+
+                }
+
+                <span class="cb1">return</span> \_config;
+
+            }
+
+        }
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> Sets the
+principal for this page request.</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<param name="principal"\></span><span class="cb3">The
+principal to use for the rest of the request.</span><span
+class="cb2">\</param\></span>
+
+        <span class="cb1">internal</span> <span class="cb1">void</span>
+SetPrincipal(IPrincipal principal) {
+
+            \_principal = principal;
+
+        }
+
+ 
+
+ 
+
+<span class="cb1">        \#endregion</span>
+
+ 
+
+        <span class="cb1">public</span> BasePage()
+
+        {
+
+            <span class="cb3">// No constructor necessary</span>
+
+        }
+
+ 
+
+ 
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"> Fires at the
+beginning of the page lifecycle.  Overriden here to retrieve principal
+data from the</span>
+
+        <span class="cb2">///</span><span class="cb3"> Enterprise
+Library Security Cache provider or, if unable, to redirect to he login
+page.</span>
+
+        <span class="cb2">///</span><span class="cb3"> The Login.aspx
+page will add the appropriate token via the <span class="caps">ASP</span>.<span class="caps">NET</span> forms authentication
+cookie</span>
+
+        <span class="cb2">///</span><span class="cb3"> if the user
+successfully logs in.</span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\</summary\></span>
+
+        <span class="cb2">///</span><span class="cb3"></span><span
+class="cb2">\<param name="e"\>\</param\></span>
+
+        <span class="cb1">protected</span> <span
+class="cb1">override</span> <span class="cb1">void</span>
+OnInit(EventArgs e) {
+
+            <span class="cb1">base</span>.OnInit(e);
+
+            <span class="cb3">// Make sure to skip this step if you&#8217;re
+already on the login page</span>
+
+            <span class="cb1">if</span>
+(ResolveUrl(&#8220;\~/Login.aspx&#8221;)!=Request.Url.AbsolutePath) {
+
+                <span class="cb1">try</span> {
+
+                    <span class="cb3">// Load the principal from the
+FormsAuthentication ticket information.</span>
+
+                    FormsAuthenticationTicket ticket =
+FormsAuthentication.Decrypt((<span
+class="cb1">string</span>)Request.Cookies[FormsAuthentication.FormsCookieName].Value);
+
+                    GuidToken token = <span class="cb1">new</span>
+GuidToken(<span class="cb1">new</span> System.Guid(ticket.UserData));
+
+                    IPrincipal principal =
+SecCacheProvider.GetPrincipal(token);
+
+                    <span class="cb1">if</span> (<span
+class="cb1">null</span>==principal) {
+
+                        Response.Redirect(&#8220;\~/Login.aspx&#8221;);
+
+                    } <span class="cb1">else</span> {
+
+                        SetPrincipal(principal);
+
+                    }
+
+                } <span class="cb1">catch</span> (Exception) {
+
+                    <span class="cb3">// If we have any issues, redirect
+to Login</span>
+
+                    Response.Redirect(ResolveUrl(&#8220;\~/Login.aspx&#8221;));
+
+                }
+
+            }
+
+        }
+
+ 
+
+ 
+
+    }
+
+}
+
+</div>
+
+<p>Cool&nbsp;stuff!</p>
+</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'enterprise-library-authentication';
+                var disqus_url = 'http://adamgetchell.org/enterprise-library-authentication.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="images/adam_ben.jpg"/>
+        </p>
+    <p>
+        <strong>About Adam Getchell</strong><br/>
+        Physics and computing
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://about.me/adamgetchell"><i class="fa fa-aboutme-square fa-lg"></i> AboutMe</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/adamgetchell"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="http://www.linkedin.com/in/adamgetchell"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="http://github.com/acgetchell"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="http://www.last.fm/user/adamgetchell"><i class="fa fa-lastfm-square fa-lg"></i> LastFM</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+    </li>
+
+    <li class="list-group-item"><h4><i class="fa fa-twitter fa-lg"></i><span class="icon-label">Latest Tweets</span></h4></li>
+    <div id="twitter_timeline">
+        <a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/adamgetchell" data-widget-id="701556215399194624">Tweets by adamgetchell</a>
+    </div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://mozillascience.org" target="_blank">
+                Mozilla Science Lab
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://arxiv.org/find/all/1/all:+AND+triangulations+AND+causal+dynamical/0/1/0/all/0/1" target="_blank">
+                Current CDT papers
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Adam Getchell
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://adamgetchell.org/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://adamgetchell.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://adamgetchell.org/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = 'http://adamgetchell.org/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'acgetchell',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="http://adamgetchell.org/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
