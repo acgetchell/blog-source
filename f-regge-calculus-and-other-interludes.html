@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>F#, Regge Calculus, and other interludes - Adam's Entropy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://adamgetchell.org/f-regge-calculus-and-other-interludes.html">
+
+        <meta name="author" content="Adam Getchell" />
+        <meta name="keywords" content="cdt,.net,information theory,thermodynamics,quantum mechanics,f#" />
+        <meta name="description" content="Still working on Causal Dynamical Triangulations, I’ve also taken some time out to (start to) learn a delightful new functional programming language, F#, with the help of a good site, online journal, and this book. Mixing functional, imperative, and object-oriented programming with good mathematics features and the .NET framework ..." />
+
+        <meta property="og:site_name" content="Adam's Entropy" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="F#, Regge Calculus, and other interludes"/>
+        <meta property="og:url" content="http://adamgetchell.org/f-regge-calculus-and-other-interludes.html"/>
+        <meta property="og:description" content="Still working on Causal Dynamical Triangulations, I’ve also taken some time out to (start to) learn a delightful new functional programming language, F#, with the help of a good site, online journal, and this book. Mixing functional, imperative, and object-oriented programming with good mathematics features and the .NET framework ..."/>
+        <meta property="article:published_time" content="2007-11-19" />
+            <meta property="article:section" content="Physics" />
+            <meta property="article:tag" content="cdt" />
+            <meta property="article:tag" content=".net" />
+            <meta property="article:tag" content="information theory" />
+            <meta property="article:tag" content="thermodynamics" />
+            <meta property="article:tag" content="quantum mechanics" />
+            <meta property="article:tag" content="f#" />
+            <meta property="article:author" content="Adam Getchell" />
+
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@adamgetchell">
+        <meta name="twitter:creator" content="@adamgetchell">
+    <meta name="twitter:domain" content="http://adamgetchell.org">
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://adamgetchell.org/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://adamgetchell.org/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://adamgetchell.org/theme/css/pygments/native.css" rel="stylesheet">
+        <link href="http://adamgetchell.org/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://adamgetchell.org/theme/css/style.css" type="text/css"/>
+
+        <link href="http://adamgetchell.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy ATOM Feed"/>
+
+
+
+        <link href="http://adamgetchell.org/feeds/physics.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Adam's Entropy Physics ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://adamgetchell.org/" class="navbar-brand">
+Adam's Entropy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://adamgetchell.org/category/misc.html">Misc</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://adamgetchell.org/category/physics.html">Physics</a>
+                        </li>
+                        <li >
+                            <a href="http://adamgetchell.org/category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://adamgetchell.org/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="http://adamgetchell.org" title="Adam's Entropy"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="http://adamgetchell.org/category/physics.html" title="Physics">Physics</a></li>
+                <li class="active">F#, Regge Calculus, and other&nbsp;interludes</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://adamgetchell.org/f-regge-calculus-and-other-interludes.html"
+                       rel="bookmark"
+                       title="Permalink to F#, Regge Calculus, and other interludes">
+                        F#, Regge Calculus, and other&nbsp;interludes
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2007-11-19T05:39:00-08:00"> Mon 19 November 2007</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="http://adamgetchell.org/category/physics.html">Physics</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://adamgetchell.org/tag/cdt.html">cdt</a>
+        /
+	<a href="http://adamgetchell.org/tag/net.html">.net</a>
+        /
+	<a href="http://adamgetchell.org/tag/information-theory.html">information theory</a>
+        /
+	<a href="http://adamgetchell.org/tag/thermodynamics.html">thermodynamics</a>
+        /
+	<a href="http://adamgetchell.org/tag/quantum-mechanics.html">quantum mechanics</a>
+        /
+	<a href="http://adamgetchell.org/tag/f.html">f#</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Still working on <a href="http://adamgetchell.blogspot.com/2007_10_01_archive.html">Causal Dynamical
+Triangulations</a>,
+I&#8217;ve also taken some time out to (start to) learn a delightful new
+functional programming language,
+<a href="http://research.microsoft.com/fsharp/fsharp.aspx">F#</a>, with the help
+of a good <a href="http://cs.hubfs.net/">site</a>, online
+<a href="http://www.ffconsultancy.com/products/fsharp_journal/">journal</a>, and
+this <a href="http://strangelights.com/">book</a>. Mixing functional, imperative,
+and object-oriented programming with good mathematics features and the
+.<span class="caps">NET</span> framework allows me to blend work and academics. The goal is to
+write a first-cut <span class="caps">CDT</span> program in F# and refine as necessary&nbsp;&#8230;.  </p>
+<p>CDTs depend upon <a href="http://en.wikipedia.org/wiki/Regge_calculus">Regge
+calculus</a>, which is
+essentially a prescribed way for dividing up spacetime into a discrete
+lattice (simplexes) while adhering to the Einstein field equations.
+(Regge calculus is explained in detail in Chapter 41 of <a href="http://www.amazon.com/Gravitation-Physics-Kip-S-Thorne/dp/0716703440/ref=ed_oe_p/002-3874810-3091246">Gravitation,
+aka the Big Black
+Book</a>.)  </p>
+<p>In particular, you divide up a smooth 4-manifold into a collection of
+4-d simplexes, in the same way you can divide up a 3-sphere into the
+(2-)triangles of the icosohedron. If you pressed the icosohedron
+perfectly flat onto a plane, you would see <span
+style="font-style: italic;">deficit angles</span> or <span
+style="font-style: italic;">hinges</span> that essentially reflect the
+its spherical curvature. In the same way, you analyze the simplices of
+the 4-d manifold to determine its&nbsp;curvature.  </p>
+<p>If you are extraordinarily careful in how you setup your lattice, you
+can perfectly constrain your volume using just fixed edge lengths. (For
+example, a <a href="http://en.wikipedia.org/wiki/Tessellation">tiling</a> of
+triangles constrains a surface rigidly, because the tiling cannot be
+deformed without changing edge lengths. A tiling of squares does not,
+because the squares can be squashed sideways into parallelograms without
+changing their edge&nbsp;lengths.)  </p>
+<p>And if you do this, you can now examine that volume (or brane, or bulk )
+by solving the Einstein equations expressed in terms of conditions on
+the hinge angles (which are themselves functions only of the edge
+lengths). This is exciting because you can now program a computer
+(carefully) to solve problems that don&#8217;t lend themselves to analytic
+solution, which allows you to do interesting&nbsp;things:  </p>
+<p><a href="http://arxiv.org/PS_cache/gr-qc/pdf/0506/0506071v2.pdf">Discrete quantum gravity in the framework of Regge calculus&nbsp;formalism</a>  </p>
+<p>In the past few weeks, I&#8217;ve also taken time to read up on a few areas of&nbsp;interest.  </p>
+<p>Perhaps one of the more interesting recent occurrences is the recent
+re-examination of the 2nd law of thermodynamics, long thought to be
+inviolable and one of the most solid foundations of physics by such
+luminaries as Maxwell, Einstein, Eddington, and&nbsp;Brilloun.  </p>
+<p>Physics is always fun, check your assumptions at the&nbsp;door!  </p>
+<p>First, a nice publicly accessible&nbsp;summary:  </p>
+<p><a href="http://arxiv.org/PS_cache/cond-mat/pdf/0208/0208291v1.pdf">Why Do We Believe in the Second
+Law?</a>, T.&nbsp;Duncan  </p>
+<p>The <span style="font-style: italic;">Foundations of Physics</span>
+journal, Volume 37, Number 12/December 2007 is devoted to this
+extraordinary topic (unfortunately, e-journal subscriptions required to
+view), starting with Geraard t&#8217;Hooft&#8217;s
+<a href="http://springerlink.metapress.com/content/4275497r4v43823p/fulltext.pdf">editorial</a>,
+which gives a broad summary of the scope of the papers in the&nbsp;journal.  </p>
+<p>Next, we have:<br />
+<a href="http://springerlink.metapress.com/content/lhj15642v3445722/fulltext.pdf"><br />
+The Second Law of Thermodynamics: Foundations and
+Status</a>,
+by <span class="caps">D.P.</span>&nbsp;Sheehan  </p>
+<p>This paper gives a broad overview on three classes of discussion
+regarding the Second Law now underway: ideal gases, quantum
+perspectives, and&nbsp;interpretations.  </p>
+<p><a href="http://springerlink.metapress.com/content/c505876828551152/fulltext.pdf">Information Loss as a Foundational Principle for the Second Law of
+Thermodynamics</a>,
+by <span class="caps">T.L.</span> Duncan and <span class="caps">J.S.</span>&nbsp;Semura  </p>
+<p>This paper explores in detail the concept of information loss as being
+the fundamental explanation for entropy, essentially casting the 2nd law
+from &#8220;Entropy always increases for irreversible processes&#8221; to
+&#8220;Information is always lost for irreversible processes&#8221;. The authors
+further argue that all classical derivations of the 2nd law using
+&#8220;entropy&#8221; actually incorporate, explicitly or implicitly, information
+loss as the&nbsp;mechanism.  </p>
+<p>As an example, <a href="http://en.wikipedia.org/wiki/Maxwell%27s_demon">Maxwell&#8217;s
+demon</a> is shown to be
+able to violate the 2nd law on the basis of having information &#8212; in
+particular, knowing how to sort fast-moving from slow-moving particles.
+However, creation of that information eventually involves the deletion
+of a bit of information from storage &#8212; for a subsequent Kln2 energy
+cost &#8212; which is argued as being the source of entropy. (All faults are
+mine, not the authors, if I&#8217;ve paraphrased these arguments&nbsp;incorrectly.)  </p>
+<p>Jean E. Burns, in <a href="http://springerlink.metapress.com/content/67143288r1652w14/fulltext.pdf">Vacuum Radiation, Entropy, and Molecular
+Chaos</a>,
+makes a very interesting extension to classical entropy models for
+isolated systems. Classical thermodynamic models separate the system
+from the environment. The canonical example is the refrigerator, which
+decreases temperature (thus entropy) locally, but at the expense of
+expelling even more heat (thus increasing entropy) in the environment.
+The entropy/heat loss inside the system is outweighed by the
+entropy/heat gain in the&nbsp;environment.  </p>
+<p>However, what happens for an arbitrarily large system (such as the
+universe), where there is no external reservoir? Burns argues that
+vacuum radiation provides the mechanism for entropy&nbsp;increase.  </p>
+<p>Perhaps of most interest to biologists and science-fiction fans is
+Sheehan&#8217;s <a href="http://springerlink.metapress.com/content/9km828746w91p011/fulltext.pdf">Thermosynthetic
+Life</a>,
+which postulates the existence of life forms deriving their energy
+solely from thermal energy. In addition to searches for extremophile
+lifeforms (such as bacteria near volcanic vents) that fit this profile,
+it provides an engaging test into the 2nd Law, because such life-forms
+may well violate&nbsp;it!  </p>
+<p>And, continuing on with our examinations into entropy and information
+theory, we&nbsp;have:  </p>
+<p><span style="text-decoration: underline;"></span><a href="http://www.worldscinet.com/ijmpd/mkt/preserved-docs/1512/S0218271806009765.pdf">Information Recovery
+from Black
+Holes</a>,
+V. Balasubramanian, D. Marolf, and M.&nbsp;Rozali  </p>
+<p>This first-place prizewinning essay of the 2006 Essay Competition of the
+Gravity Research Foundation provides insights into two crucial&nbsp;questions:  </p>
+<ol>
+<li>Why do classical black holes have finite entropy equal to a quarter
+    of the horizon&nbsp;area?</li>
+<li>How does information escape from an evaporating black&nbsp;hole?</li>
+</ol>
+<p>In essence (modulo a great many technical arguments), the answer to both
+of these questions is that the finite mass black hole, representing a
+finite number of energy states N, therefore possesses a discrete energy
+spectrum. In general, discrete spectra are quantum-mechanically
+non-degenerate, so knowledge of the precise energy and other (commuting)
+conserved charges determines the quantum state. But General Relativity
+charges are generically given by boundary terms; thus, the entire state
+of the black hole resides in the boundary (asymptotic region), available
+to all&nbsp;observers.  </p>
+<p>This is at odds with classical <span class="caps">GR</span>, because there exist unobservable
+regions within the black hole that are causally separated. However, in
+the quantum mechanical case the Heisenberg Uncertainty principle
+dictates that a &#8220;Heisenberg recurrence time&#8221; exists. This can be thought
+of as a sort of spontaneous large thermal fluctuation in which the black
+hole may be replaced by a ball of expanding hot gas. Although the gas
+will re-collapse to form another black hole on a relatively short time
+scale, during the span of its existence the full details of the black
+hole&#8217;s internal state are visible from&nbsp;infinity.  </p>
+<p>And thus we see that at the quantum level, the event horizon becomes
+ill-defined, and quantum mechanics, entropy, and information theory
+collaborate against General Relativity to allow what was previously
+thought to be&nbsp;impossible.  </p>
+<p>And in a final bit of fun, we see a method for efficiently converting
+black holes into gravitational waves:<br />
+<a href="http://www.worldscinet.com/ijmpd/mkt/free/S0218271806009625.html"><br />
+Black Hole Bremsstrahlung: Can it be an efficient source of
+gravitational&nbsp;waves?</a>  </p>
+<p>Taking a 2 solar mass black hole traveling at .38c and converting 90% of
+its rest mass into a lobe-shaped pulse with width deltaU \~ 40 for 10E40
+GeV\^2 sounds&nbsp;exciting!</p>
+</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'f-regge-calculus-and-other-interludes';
+                var disqus_url = 'http://adamgetchell.org/f-regge-calculus-and-other-interludes.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="images/adam_ben.jpg"/>
+        </p>
+    <p>
+        <strong>About Adam Getchell</strong><br/>
+        Physics and computing
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://about.me/adamgetchell"><i class="fa fa-aboutme-square fa-lg"></i> AboutMe</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/adamgetchell"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="http://www.linkedin.com/in/adamgetchell"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="http://github.com/acgetchell"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="http://www.last.fm/user/adamgetchell"><i class="fa fa-lastfm-square fa-lg"></i> LastFM</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+    </li>
+
+    <li class="list-group-item"><h4><i class="fa fa-twitter fa-lg"></i><span class="icon-label">Latest Tweets</span></h4></li>
+    <div id="twitter_timeline">
+        <a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/adamgetchell" data-widget-id="701556215399194624">Tweets by adamgetchell</a>
+    </div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://mozillascience.org" target="_blank">
+                Mozilla Science Lab
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://arxiv.org/find/all/1/all:+AND+triangulations+AND+causal+dynamical/0/1/0/all/0/1" target="_blank">
+                Current CDT papers
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Adam Getchell
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://adamgetchell.org/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://adamgetchell.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://adamgetchell.org/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = 'http://adamgetchell.org/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'acgetchell',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="http://adamgetchell.org/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'adamsentropy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
